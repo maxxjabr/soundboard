@@ -1,5 +1,16 @@
 {
-	"harry1": "./sounds/harry1.ogg",
-	"harry2": "./sounds/harry2.ogg",
-	"harry3": "./sounds/harry3.ogg"
+	"quack": "./sounds/1_quack.mp3",
+	"airhorn": "./sounds/2_airhorn.mp3",
+	"cricket": "./sounds/3_cricket.mp3",
+	"golf-clap": "./sounds/4_golf_clap.mp3",
+	"sad-horn": "./sounds/5_sad_horn.mp3",
+	"drum": "./sounds/6_drum.mp3",
+	"boom": "./sounds/boom.ogg",
+	"chinese-rap-song": "./sounds/chinese_rap_song.ogg"
+	"discord-notif": "./sounds/discord_notif.ogg"
+	"grilled-cheese": "./sounds/grilled_cheese.ogg"
+	"harry": "./sounds/harry.ogg"
+	"plu": "./sounds/plu.ogg"
+	"vc-join": "./sounds/vc_join.ogg"
+	"vc-leave": "./sounds/vc_leave.ogg"
 }
