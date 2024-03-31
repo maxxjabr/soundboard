@@ -3,6 +3,7 @@
 <head></head>
 <body>
 	<script>
+		// Fetch sound list.
 		const sounds = {};
 		fetch("/sounds.json")
 			.then(x => x.json())
@@ -11,10 +12,26 @@
 					sounds[name] = new Audio(path);
 				}
 			});
+
+		// Listen for sound commands.
+		const queue = [];
 		new EventSource("/events")
 			.addEventListener("sound", (event) => {
-				sounds[event.data]?.play();
+				const sound = event.data;
+				if (sound in sounds) {
+					queue.push(sounds[sound]);
+				}
 			});
+
+		// Play queued sounds.
+		const frequency = 200;
+		const interval = setInterval(() => {
+			if (queue.length) {
+				const sound = queue.shift();
+				sound.currentTime = 0;
+				sound.play();
+			}
+		}, frequency);
 	</script>
 </body>
 </html>
